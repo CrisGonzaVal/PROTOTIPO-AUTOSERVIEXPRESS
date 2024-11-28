@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Orden de Servicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Crear Orden de Servicio</h1>
+    </header>
+    <main>
+        <form>
+            <label for="vehicle">Vehículo:</label>
+            <select id="vehicle" required>
+                <option value="">Selecciona tu vehículo</option>
+                <option value="auto1">Auto 1</option>
+                <option value="auto2">Auto 2</option>
+            </select>
+            <label for="service">Servicio:</label>
+            <select id="service" required>
+                <option value="">Selecciona un servicio</option>
+                <option value="mantenimiento">Mantenimiento</option>
+                <option value="reparacion">Reparación</option>
+            </select>
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" required>
+            <label for="comments">Comentarios:</label>
+            <textarea id="comments"></textarea>
+            <button type="submit">Crear Orden</button>
+        </form>
+    </main>
+</body>
+</html>
