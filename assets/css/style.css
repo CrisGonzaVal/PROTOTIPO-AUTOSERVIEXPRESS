@@ -1,15 +1,21 @@
 /* Header */
+body{
+    background-color: #efeeee;
+}
+
+
 header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 120px; /* Ajuste de altura para evitar demasiado espacio */
+    height: 90px; /* Ajuste de altura para evitar demasiado espacio */
     display: flex;
     align-items: center; /* Centrar verticalmente */
+    overflow: hidden;
 }
 
 /* Logo */
 .logo {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     object-fit: contain; /* Mantener proporción */
 }
 
@@ -25,6 +31,12 @@ header a {
 .card {
     border: none;
     transition: transform 0.3s, box-shadow 0.3s;
+    width: 400px; /* Tamaño fijo */
+    height: 300px; /* Tamaño fijo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Para evitar que el contenido se desborde */
 }
 
 .card:hover {
@@ -43,4 +55,57 @@ header a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.card-body {
+    padding: 16px;
+    text-align: center; /* Centramos el texto */
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Hero Image */
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
 }
