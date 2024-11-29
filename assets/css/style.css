@@ -23,6 +23,11 @@ header {
     overflow: hidden;
 }
 
+header span {
+    font-size: 16px;
+    color: #fff;
+}
+
 /* Logo */
 .logo {
     width: 180px;
@@ -33,9 +38,9 @@ header {
 
 /* Botones */
 header a {
-    font-size: 16px;
-    padding: 8px 16px; /* Ajuste de padding */
-    margin: 0 5px; /* Espaciado uniforme */
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-left: 10px;
 }
 
 /* Cards */
@@ -64,8 +69,10 @@ header a {
 
 .card-registerVehiculo{
     width: 400px; /* Tamaño fijo */
-    height: 500px; /* Tamaño fijo */
+    height: 560px; /* Tamaño fijo */
 }
+
+
 
 .card:hover {
     transform: scale(1.05);
@@ -155,6 +162,7 @@ footer {
     margin: 10px auto; /* Centrado con margen superior/inferior */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
 }
 
 .reservation-card .card-title {
