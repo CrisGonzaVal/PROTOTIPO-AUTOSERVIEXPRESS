@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Datos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="assets/images/logo.png" alt="AutoServiExpress Logo" class="logo me-3">
+            </div>
+            <div>
+                <span class="me-3">Bienvenido, <strong>Cristian Gonzalez</strong></span>
+                <a href="dashboard.html" class="btn btn-outline-light">Volver</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Formulario -->
+    <main class="container my-5">
+        <h2 class="text-center mb-4">Actualizar Datos Personales</h2>
+        <form class="mx-auto" style="max-width: 500px;">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" value="Juan Pérez">
+            </div>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" value="Av. Los Laureles 123">
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" value="987654321">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Actualizar Datos</button>
+                <a href="cambiar_contrasena.html" class="btn btn-outline-primary ms-2">Cambiar Contraseña</a>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>AutoServiExpress © 2024 | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

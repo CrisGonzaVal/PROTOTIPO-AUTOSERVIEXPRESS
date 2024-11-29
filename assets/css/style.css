@@ -200,3 +200,22 @@ footer {
     margin: 0; /* Elimina márgenes */
     padding: 0;
 }
+
+/* Tablas */
+table {
+    text-align: center;
+}
+
+table th, table td {
+    vertical-align: middle;
+}
+
+.table-primary {
+    background-color: #007bff !important;
+    color: white;
+}
+
+button {
+    font-size: 0.9rem;
+}
+
