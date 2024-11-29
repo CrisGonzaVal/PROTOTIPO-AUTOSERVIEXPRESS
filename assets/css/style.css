@@ -1,6 +1,15 @@
 /* Header */
 body{
     background-color: #efeeee;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Asegura que el contenido principal ocupe el espacio necesario */
+main, .container {
+    flex: 1;
 }
 
 
@@ -31,12 +40,24 @@ header a {
 .card {
     border: none;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 400px; /* Tamaño fijo */
-    height: 300px; /* Tamaño fijo */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden; /* Para evitar que el contenido se desborde */
+}
+
+.card-index{
+    width: 400px; /* Tamaño fijo */
+    height: 300px; /* Tamaño fijo */
+}
+
+.card-login{
+    width: 400px; /* Tamaño fijo */
+    height: 300px; /* Tamaño fijo */
+}
+.card-register{
+    width: 400px; /* Tamaño fijo */
+    height: 490px; /* Tamaño fijo */
 }
 
 .card:hover {
@@ -108,4 +129,14 @@ header a {
 .hero-text p {
     font-size: 1.2rem;
     margin: 10px 0 0;
+}
+
+
+/* Footer */
+footer {
+    background-color: #212529; /* Color oscuro */
+    color: white; /* Texto en blanco */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Empuja el footer hacia abajo */
 }
