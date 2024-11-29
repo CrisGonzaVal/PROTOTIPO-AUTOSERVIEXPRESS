@@ -1,0 +1,46 @@
+/* Header */
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 120px; /* Ajuste de altura para evitar demasiado espacio */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+}
+
+/* Logo */
+.logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain; /* Mantener proporción */
+}
+
+
+/* Botones */
+header a {
+    font-size: 16px;
+    padding: 8px 16px; /* Ajuste de padding */
+    margin: 0 5px; /* Espaciado uniforme */
+}
+
+/* Cards */
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagenes */
+.img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

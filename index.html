@@ -1,37 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoServiceExpress - Inicio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Bienvenido a AutoServiceExpress</h1>
-        <nav>
-            <ul>
-                <li><a href="login.html">Iniciar Sesión</a></li>
-                <li><a href="registroCliente.html">Registrarse</a></li>
-            </ul>
-        </nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AutoServiExpress</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+<body>    
+    <header class="bg-primary text-white py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo y Título -->
+            <div class="d-flex align-items-center">
+                <img src="assets/images/logo.png" alt="AutoServiExpress Logo" class="logo me-3">
+            </div>
+            <!-- Opciones de Inicio Sesión y Registro -->
+            <div>
+                <a href="login.html" class="btn btn-light me-2">Iniciar Sesión</a>
+                <a href="register.html" class="btn btn-outline-light">Registrar Cliente</a>
+            </div>
+        </div>
     </header>
-    <main>
-        <section>
-            <h2>¿Qué es AutoServiceExpress?</h2>
-            <p>AutoServiceExpress es la solución para gestionar servicios mecánicos de forma eficiente.</p>
-        </section>
-        <section>
-            <h2>Características</h2>
-            <ul>
-                <li>Gestión de clientes</li>
-                <li>Reserva de servicios</li>
-                <li>Facturación automatizada</li>
-            </ul>
-        </section>
+    
+    <main class="container my-5">
+        <div class="text-center mb-4">
+            <h2>Nuestros Servicios</h2>
+            <p>Descubre los servicios que tenemos para ti y tu vehículo</p>
+        </div>
+        <div class="row g-4">
+            <!-- Servicio 1 -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="img-container">
+                        <img src="assets/images/oil_change.jpg" class="card-img-top" alt="Cambio de Aceite">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Cambio de Aceite</h5>
+                        <p class="card-text">Mantenimiento esencial para un motor saludable.</p>
+                        <a href="login.html" class="btn btn-primary">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Servicio 2 -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="img-container">
+                        <img src="assets/images/brake_service.jpg" class="card-img-top" alt="Servicio de Frenos">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Servicio de Frenos</h5>
+                        <p class="card-text">Mantén tus frenos seguros y confiables.</p>
+                        <a href="login.html" class="btn btn-primary">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Servicio 3 -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="img-container">
+                        <img src="assets/images/tire_change.jpg" class="card-img-top" alt="Cambio de Neumáticos">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Cambio de Neumáticos</h5>
+                        <p class="card-text">Reemplazo de neumáticos para una conducción suave.</p>
+                        <a href="login.html" class="btn btn-primary">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 mt-4">
+            <!-- Servicio 4 -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="img-container">
+                        <img src="assets/images/engine_service.jpg" class="card-img-top" alt="Revisión de Motor">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Revisión de Motor</h5>
+                        <p class="card-text">Diagnóstico completo de tu motor.</p>
+                        <a href="login.html" class="btn btn-primary">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Servicio 5 -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="img-container">
+                        <img src="assets/images/battery_check.jpg" class="card-img-top" alt="Chequeo de Batería">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Chequeo de Batería</h5>
+                        <p class="card-text">Verificación y reemplazo de batería.</p>
+                        <a href="login.html" class="btn btn-primary">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Servicio 6 -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="img-container">
+                        <img src="assets/images/general_service.jpg" class="card-img-top" alt="Servicio General">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Servicio General</h5>
+                        <p class="card-text">Mantén tu vehículo en óptimas condiciones.</p>
+                        <a href="login.html" class="btn btn-primary">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
-        <p>&copy; 2024 AutoServiceExpress. Todos los derechos reservados.</p>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>AutoServiExpress © 2024 | Todos los derechos reservados</p>
     </footer>
 </body>
 </html>
