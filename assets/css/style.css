@@ -5,12 +5,14 @@ body{
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    font-family: 'Poppins', sans-serif; /* Fuente principal */
 }
 
 /* Asegura que el contenido principal ocupe el espacio necesario */
 main, .container {
     flex: 1;
 }
+
 
 
 header {
@@ -58,6 +60,11 @@ header a {
 .card-register{
     width: 400px; /* Tamaño fijo */
     height: 490px; /* Tamaño fijo */
+}
+
+.card-registerVehiculo{
+    width: 400px; /* Tamaño fijo */
+    height: 500px; /* Tamaño fijo */
 }
 
 .card:hover {
@@ -139,4 +146,49 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+
+.reservation-card {
+    width: 90%;
+    height: 20%;
+    margin: 10px auto; /* Centrado con margen superior/inferior */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-card .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.reservation-card .card-body {
+    padding: 20px;
+}
+
+.reservation-card input,
+.reservation-card select {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.reservation-card .btn-primary {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Centrado del Card */
+.center-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #efeeee; /* Fondo neutro */
+    margin: 0; /* Elimina márgenes */
+    padding: 0;
 }

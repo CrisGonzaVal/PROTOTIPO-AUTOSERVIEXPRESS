@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - AutoServiExpress</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="bg-primary text-white py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="assets/images/logo.png" alt="AutoServiExpress Logo" class="logo me-3">
+            </div>
+            <div>
+                <a href="index.html" class="btn btn-light me-2">Cerrar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="text-center mb-4">
+            <h2>Bienvenido, Cristian Gonzalez</h2>
+            <p>¿Qué deseas hacer hoy?</p>
+        </div>
+        <div class="row g-4">
+            <!-- Opción 1 -->
+            <div class="col-md-4">
+                <a href="register_vehicle.html" style="text-decoration: none;">
+                <div class="card shadow" href="register_vehicle.html">
+                    <div class="img-container">
+                        <img src="assets/images/register_vehicle.jpg" class="card-img-top" alt="Registrar Vehículo">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Registrar Vehículo</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <!-- Opción 2 -->
+            <div class="col-md-4">
+                <a href="request_service.html" style="text-decoration: none;">
+                <div class="card shadow">
+                    <div class="img-container">
+                        <img src="assets/images/service_request.png" class="card-img-top" alt="Pedir Servicio">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pedir Hora de Servicio</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <!-- Opción 3 -->
+            <div class="col-md-4">
+                <a href="update_profile.html" style="text-decoration: none;">
+                <div class="card shadow">
+                    <div class="img-container">
+                        <img src="assets/images/update_profile.jpg" class="card-img-top" alt="Actualizar Datos">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Actualizar Datos</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+        <div class="row g-4 mt-4">
+            <!-- Opción 4 -->
+            <div class="col-md-6">
+                <a href="service_history.html" style="text-decoration: none;">
+                <div class="card shadow">
+                    <div class="img-container">
+                        <img src="assets/images/service_history.jpeg" class="card-img-top" alt="Historial de Servicios">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Consultar Historial de Servicios</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <!-- Opción 5 -->
+            <div class="col-md-6">
+                <a href="invoices.html" style="text-decoration: none;">
+                <div class="card shadow">
+                    <div class="img-container">
+                        <img src="assets/images/invoices.jpg" class="card-img-top" alt="Consultar Facturas">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Consultar Facturas</h5>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>AutoServiExpress © 2024 | Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

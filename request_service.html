@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedir Hora de Servicio - AutoServiExpress</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            width: 180px;
+            height: 220px;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        .img-container {
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+        }
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .selected {
+            border: 2px solid green;
+            position: relative;
+        }
+        .selected::after {
+            content: "✔";
+            color: green;
+            font-size: 24px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white py-1">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="assets/images/logo.png" alt="AutoServiExpress Logo" class="logo me-3">
+            </div>
+            <div>
+                <a href="dashboard.html" class="btn btn-light me-2">Volver</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <h2 class="text-center mb-4">Pedir Hora de Servicio Mecánico</h2>
+
+        <!-- Selección de Servicios -->
+        <div class="text-center mb-4">
+            <h3>Selecciona los Servicios</h3>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <!-- Servicios -->
+            <div class="card" onclick="toggleService(this, 'Cambio de Aceite')">
+                <div class="img-container">
+                    <img src="assets/images/oil_change.jpg" class="card-img-top" alt="Cambio de Aceite">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Cambio de Aceite</h5>
+                </div>
+            </div>
+            <div class="card" onclick="toggleService(this, 'Servicio de Frenos')">
+                <div class="img-container">
+                    <img src="assets/images/brake_service.jpg" class="card-img-top" alt="Servicio de Frenos">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Servicio de Frenos</h5>
+                </div>
+            </div>
+            <div class="card" onclick="toggleService(this, 'Cambio de Neumáticos')">
+                <div class="img-container">
+                    <img src="assets/images/tire_change.jpg" class="card-img-top" alt="Cambio de Neumáticos">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Cambio de Neumáticos</h5>
+                </div>
+            </div>
+            <div class="card" onclick="toggleService(this, 'Revisión de Motor')">
+                <div class="img-container">
+                    <img src="assets/images/engine_service.jpg" class="card-img-top" alt="Revisión de Motor">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Revisión de Motor</h5>
+                </div>
+            </div>
+            <div class="card" onclick="toggleService(this, 'Chequeo de Batería')">
+                <div class="img-container">
+                    <img src="assets/images/battery_check.jpg" class="card-img-top" alt="Chequeo de Batería">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Chequeo de Batería</h5>
+                </div>
+            </div>
+            <div class="card" onclick="toggleService(this, 'Servicio General')">
+                <div class="img-container">
+                    <img src="assets/images/general_service.jpg" class="card-img-top" alt="Servicio General">
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Servicio General</h5>
+                </div>
+            </div>
+        </div>
+
+        <!-- Opciones Adicionales -->
+        <div class="card shadow mt-5 reservation-card">
+            <div class="card-body">
+                <h5 class="card-title text-center">Detalles de la Reserva</h5>
+                <div class="mb-3">
+                    <label for="vehicle" class="form-label">Seleccionar Vehículo</label>
+                    <select class="form-select" id="vehicle">
+                        <option selected>Selecciona tu vehículo</option>
+                        <option value="1">ABC-123 (Toyota Corolla)</option>
+                        <option value="2">XYZ-456 (Nissan Sentra)</option>
+                        <option value="3">LMN-789 (Honda Civic)</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="date" class="form-label">Fecha</label>
+                        <input type="date" class="form-control" id="date">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="time" class="form-label">Hora</label>
+                        <input type="time" class="form-control" id="time">
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="button" class="btn btn-primary" onclick="reserveService()">Reservar Hora</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>AutoServiExpress © 2024 | Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        const selectedServices = new Set();
+
+        function toggleService(card, service) {
+            if (selectedServices.has(service)) {
+                selectedServices.delete(service);
+                card.classList.remove('selected');
+            } else {
+                selectedServices.add(service);
+                card.classList.add('selected');
+            }
+        }
+
+        function reserveService() {
+            const vehicle = document.getElementById('vehicle').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            if (selectedServices.size > 0 && vehicle && date && time) {
+                alert(`Reserva realizada:\nVehículo: ${vehicle}\nFecha: ${date}\nHora: ${time}\nServicios: ${[...selectedServices].join(', ')}`);
+            } else {
+                alert('Por favor, completa todos los campos y selecciona al menos un servicio.');
+            }
+        }
+    </script>
+</body>
+</html>
